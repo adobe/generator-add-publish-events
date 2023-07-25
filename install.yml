@@ -6,6 +6,6 @@ categories:
   - action
 
 apis:
-  - code: IOManagementSDK
+  - code: AdobeIOManagementAPISDK
 
 runtime: true
