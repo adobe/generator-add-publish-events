@@ -18,7 +18,7 @@ governing permissions and limitations under the License.
 [![License](https://img.shields.io/npm/l/@adobe/generator-add-publish-events.svg)](https://github.com/adobe/generator-add-publish-events/blob/main/package.json)
 [![Codecov Coverage](https://img.shields.io/codecov/c/github/adobe/generator-add-publish-events/master.svg?style=flat-square)](https://codecov.io/gh/adobe/generator-add-publish-events/)
 
-An Adobe action that can be added to an App Builder app as a template which publishes events in CLoud Events format to Adobe IO Events
+An Adobe action that can be added to an App Builder app as a template which publishes events in Cloud Events format to Adobe IO Events
 
 # Contributing
 

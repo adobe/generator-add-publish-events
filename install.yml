@@ -5,14 +5,6 @@ categories:
   - helper-template
   - action
 
-# extensions:
-#  - extensionPointId: my/extension/point/id
-#  - extensionPointId: my/second/extension/point/id
-
-# workspaces:
-#   - Staging
-#   - Production
-
 apis:
   - code: IOManagementSDK
 
