@@ -1,4 +1,16 @@
-/* eslint-disable jest/expect-expect */
+/* eslint jest/expect-expect: [
+  "error",
+  {
+    "assertFunctionNames": [
+        "expect",
+        "assertGeneratedFiles",
+        "assertManifestContent",
+        "assertEnvContent",
+        "assertEventCodeContent"
+    ]
+  }
+]
+*/
 /*
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -27,12 +39,20 @@ describe('prototype', () => {
   })
 })
 
+/**
+ * @param {string} actionName The provided name of the runtime action
+ * @param {string} pkgName The package in which the action is created
+ */
 function assertGeneratedFiles (actionName, pkgName) {
   assert.file(`${constants.actionsDirname}/${actionName}/index.js`)
   assert.file(`${constants.actionsDirname}/utils.js`)
 }
 
 /* eslint no-unused-vars: 0 */
+/**
+ * @param {string} actionName The provided name of the runtime action
+ * @param {string} pkgName The package in which the action is created
+ */
 function assertManifestContent (actionName, pkgName) {
   const json = yaml.load(fs.readFileSync('ext.config.yaml').toString())
   expect(json.runtimeManifest.packages).toBeDefined()
@@ -55,10 +75,16 @@ function assertManifestContent (actionName, pkgName) {
   })
 }
 
+/**
+ * @param {string} prevContent Previous content of the .env file
+ */
 function assertEnvContent (prevContent) {
   assert.fileContent('.env', prevContent)
 }
 
+/**
+ * @param {string} actionName The provided name of the runtime action
+ */
 function assertEventCodeContent (actionName) {
   const theFile = `${constants.actionsDirname}/${actionName}/index.js`
   // a few checks to make sure the action calls the events sdk to publish cloud events
