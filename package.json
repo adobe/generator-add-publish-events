@@ -1,7 +1,7 @@
 {
   "name": "@adobe/generator-add-publish-events",
   "description": "Add your template's description here",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "keywords": [
     "ecosystem:aio-app-builder-templates"
